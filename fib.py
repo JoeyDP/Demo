@@ -2,9 +2,11 @@ import sys
 
 
 def fib(n):
-	if n < 2:
-		return 1
-	return fib(n-1) + fib(n-2)
+	fibs = [1, 1]
+	for i in range(2, n):
+		fibs.append(fibs[i-1] + fibs[i-2])
+
+	return fibs[-1]
 
 
 
